@@ -14,7 +14,7 @@ body{
     padding: 50px;
 }
 
-#hero1{
+/* #hero1{
     height: 30vw;
     width: 30vw;
     background-color: orangered;
@@ -43,4 +43,83 @@ body{
     to{
         transform: translate(10%,10%);
     }
+} */
+
+
+h4 {
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: black;
+    border-radius: 50px;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.4s;
+
+}
+
+h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+    left: 0;
+
+}
+ h4 a{
+    text-decoration: none;
+    z-index: 9;
+    position: relative;
+    color: black;
+}
+
+ h4:hover a{
+    color: white;
+}
+ 
+h4:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}  
+
+
+#moving-text {
+    /* padding: 0 60vw; */
+    overflow-x: auto; 
+    white-space: nowrap;
+
+}
+
+ #moving-text::-webkit-scrollbar{ 
+    display: none;
+} 
+
+.con{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    display: inline-block; 
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
 }
