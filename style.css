@@ -221,7 +221,15 @@ nav h3{
     margin: 1vw 2vw;
 }
 
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
 
+    to {
+        transform: translateX(-100%);
+    }
+}
 
 #page2-bottom{
     height: 80vh;
@@ -623,6 +631,16 @@ nav h3{
     display: inline-block;
     background-color: #FE320A;
     margin: 2vw 2vw;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
 }
 
 #page2-bottom {
